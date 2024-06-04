@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seu portal para explorar o vasto universo dos animes!">
+    <meta name="keywords" content="animes, mangas, series, filmes, otakus">
+    <meta name="author" content="Vicente Neto">
+    <title>AnimeSearcher - É o seu portal para explorar o vasto universo dos animes!</title>
+    <link rel="icon" type="image/x-icon" href="/imagens/icon.png">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/anime.js" defer></script>
+
+    <style>
+        .anime-details-extra{
+            display: flex;
+            margin: 20px;
+            height: 100%;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .anime-details {
+            display: flex;
+            align-items: flex-start;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+            width: 100%;
+            background-color: #fff;
+        }
+        .anime-details img {
+            margin: 6px;
+            border-radius: 5px;
+            width: 20%;
+            height: auto;
+        }
+        .anime-info {
+            padding: 20px;
+        }
+        .anime-info h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+        .anime-info p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+
+</head>
+<body>
+
+    <section class="animebusca">
+        <div class="content">
+            <h1>AnimeSearcher</h1>
+            <p>AnimeSearcher é o seu portal para explorar o vasto universo dos animes! Encontre seus títulos favoritos, descubra novas séries e mergulhe em uma jornada através de gêneros, personagens icônicos e histórias cativantes.</p>
+            <form action="#" class="search-anime">
+                <input type="text" class="search-anime-input" placeholder="Pesquisar animes" required>
+                <button type="submit" class="search-anime-btn">Pesquisar</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="anime-details-extra">
+        <div class="anime-details">
+            <img src="/imagens/anime-1.webp" alt="Imagem do Anime">
+            <div class="anime-info">
+                <h2>Nome do Anime</h2>
+                <p>Ano de Lançamento: 2023</p>
+                <p>Gênero: Ação, Aventura</p>
+                <p>Episódios: 24</p>
+                <p>Sinopse: Uma breve descrição sobre o anime. Esta é uma introdução que atrai os espectadores para assistir.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 AnimeSearcher. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

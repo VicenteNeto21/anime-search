@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --color-white: #fff;
+  --color-btn-form: #4949E7; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none !important;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ddd;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: -100%;
+      background-color: #333;
+      transition: all 0.3s;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 20px 0;
+      text-align: center;
+  }
+
+  .nav-toggle {
+      display: flex;
+  }
+}
+  
+  /* Restante dos estilos continua aqui */
+  
+
+.animebusca {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-image: url('https://images6.alphacoders.com/731/thumb-1920-731739.png');
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  justify-items: center;
+}
+
+.animebusca::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.animebusca .content {
+  color: #fff;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  max-width: 760px;
+  text-align: center;
+  position: relative;
+}
+
+.animebusca h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.animebusca p {
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+.animebusca .search-anime {
+  height: 56px;
+  width: 100%;
+  display: flex;
+  padding: 6px;
+  margin: 45px 0 15px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.animebusca .search-anime .search-anime-input {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 17px;
+}
+
+.animebusca .search-anime .search-anime-btn {
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  color: var(--color-white);
+  padding: 13px 25px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+  background: var(--color-btn-form);
+}
+
+.anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.anime-card {
+  width: calc(33.33% - 20px);
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.anime-card img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.anime-card-content {
+  padding: 15px;
+}
+
+.anime-card-content h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.anime-card-content p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.anime-card-year {
+  font-size: 0.8em;
+  color: #999;
+  margin-top: 8px;
+}
+
+/* Estilo para os botões */
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.page-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 6px 14px;
+  border-radius: 5px;
+  background: #eee;
+  margin: 10px;
+}
+
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+/* Área do status do anime */
+
+.anime-status {
+  display: inline-block;
+  background-color: #28a745;
+  font-size: 14px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.anime-current {
+  font-size: 14px;
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.status-finished {
+  font-size: 14px;
+  background-color: #dc3545; /* Vermelho para Concluído */
+  color: #fff;
+}
+
+.status-unknown {
+  font-size: 14px;
+  background-color: #6c757d; /* Cinza para Desconhecido */
+  color: #fff;
+}
+
+
+footer {
+  font-size: 15px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  list-style-type: none; /* Remove os marcadores de lista */
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline; /* Exibe os itens da lista na mesma linha */
+  margin-right: 20px; /* Espaçamento entre os itens da lista */
+}
+
+.footer-links li:last-child {
+  margin-right: 0; /* Remove o espaçamento do último item da lista */
+}
+
+.footer-links li a {
+  color: #fff; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.footer-links li a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre os links */
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+  }
+}
+
+/* Tipo do anime */
+.anime-type{
+  display: inline-flex;
+  font-size: 14px;
+  color: rgb(130, 9, 146);
+  padding: 4px 10px;
+  height: 100%;
+  border: 2px solid rgb(130, 9, 146);
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* .anime-type:hover{
+  background-color: #0b1380;
+  color: #fff;
+} */
+/* Animação de transição */
+
+anime-card {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .anime-card {
+    width: calc(50% - 20px);
+  }
+}
